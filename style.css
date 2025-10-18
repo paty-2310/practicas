@@ -1,0 +1,156 @@
+/* Configuración Global y Fondo */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #121212; /* Fondo oscuro, similar a Spotify/Netflix */
+    color: #ffffff; /* Texto blanco */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo del Nombre del Artista (Cabecera) */
+.nombre-artista {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(180deg, rgba(50,0,50,0.8) 0%, rgba(18,18,18,1) 100%); 
+    animation:slideTop 1s ease forwards; 
+}
+
+.nombre-artista h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Contenedor Principal de los Álbumes */
+.contenedor-albumes {
+    max-width: 900px; /* Ancho máximo para centrar el contenido */
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Tarjeta de Cada Álbum */
+.tarjeta-album {
+    display: flex; /* Alinea la imagen y el texto en la misma línea */
+    align-items: flex-start; /* Alinea los elementos a la parte superior */
+    background-color: #181818; /* Fondo más claro para la tarjeta */
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Sombra sutil */
+    transition: transform 0.2s; /* Efecto hover */ 
+    animation: slideRight 1s ease forwards; 
+    box-shadow: 
+        0 0 0px rgb(49, 8, 0),  
+        0 0 25px rgb(54, 0, 0); 
+} 
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    } 
+} 
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    } 
+}
+
+.tarjeta-album:hover {
+    background-color: #242424; /* Cambia de color al pasar el mouse */
+    transform: translateY(-3px); /* Se levanta un poco */
+}
+
+/* Estilo de la Portada */
+.portada {
+    width: 150px; /* Tamaño de la imagen de portada */
+    height: 150px;
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+/* Detalles (Título y Canciones) */
+.detalle-album {
+    flex-grow: 1; /* Permite que el texto ocupe el espacio restante */
+}
+
+.detalle-album h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #ffffffd7; /* Un color ligeramente más claro */ 
+    cursor: pointer; 
+    text-shadow: 0 5px 10px rgb(238, 57, 57); 
+    
+}
+
+/* Lista de Canciones */
+.lista-canciones ul {
+    list-style: none; /* Elimina los puntos predeterminados */
+    padding: 0;
+    margin-top: 5px;
+}
+
+.lista-canciones li {
+    padding: 3px 0;
+    font-size: 0.9em;
+    color: #909090;
+    cursor: pointer; /* Indica que se puede hacer clic (si añadimos JS) */ 
+    
+}
+
+.lista-canciones li:hover {
+    color: #ffffff; 
+    text-decoration: none;
+}
+
+/* Estilo para el texto genérico "Aquí las canciones" */
+.lista-canciones > p {
+    font-weight: bold;
+    color: #e0e0e0;
+    margin-bottom: 10px; 
+    text-shadow: 0 5px 10px rgb(6, 48, 126); 
+    
+} 
+
+.oculto {
+    display: none; 
+} 
+
+/* ESTILO PARA LOS ENLACES DENTRO DE LA LISTA DE CANCIONES */
+.lista-canciones ul li a {
+    color: inherit; /* Hereda el color del texto de la lista (gris claro) */
+    text-decoration: none; /* ESTO QUITA LA LÍNEA AZUL/SUBRAYADO */
+}
+
+.lista-canciones ul li a:hover {
+    text-decoration: none; /* Opcional: Lo vuelves a poner solo al pasar el mouse */
+    color: #ffffff;
+} 
+.detalle-album p{
+    cursor: pointer;
+} 
+
+/* Intenta con esta regla más específica */
+.lista-canciones li a {
+    color: rgb(126, 6, 6); /* Color base */
+    text-decoration: none;
+}
+
+.lista-canciones li a:hover {
+    color:rgb(57, 90, 238)EE; /* ¡El color deseado! */
+} 
+.lista-canciones li a:hover {
+  color: rgb(238, 57, 57) !important; /* Úsalo solo si es estrictamente necesario */
+}
+
+
+
