@@ -12,7 +12,8 @@ body {
     text-align: center;
     padding: 40px 20px;
     background: linear-gradient(180deg, rgba(50,0,50,0.8) 0%, rgba(18,18,18,1) 100%); 
-    animation:slideTop 1s ease forwards; 
+    animation:slideTop 1s ease forwards;  
+    text-shadow: 0 5px 10px rgb(126, 6, 6);
 }
 
 .nombre-artista h1 {
